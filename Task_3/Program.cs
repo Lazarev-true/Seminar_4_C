@@ -5,7 +5,7 @@
 
 Console.WriteLine("Введите число N");
 int N = Convert.ToInt32(Console.ReadLine());
-
+Random x = new Random();
 int[] array = new int[N];
 int sum = 0;
 int pr = 1;
@@ -14,8 +14,7 @@ int a;
 
 while(i < N)
 {
-   Random x = new Random();
-   int value = x.Next();
+   int value = x.Next(10, 100);
    int num = value;
 
    while(num != 0)
@@ -34,10 +33,10 @@ while(i < N)
    else 
    {
       i += 0;
-      pr = 1;
-      sum = 0;
    }
-   
+   pr = 1;
+   sum = 0;
 }
 var str = string.Join(" ", array);
 Console.WriteLine(str);
+
